@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web</title>
-    <%= favicon %>
+    <title>WorkoutApp</title>
+    <%= stylesheet('application') %>
   </head>
   <body>
-    <%= yield %>
+    <header>
+      <div class="topbar">
+        <div class="container">
+          <h1>Workout app</h1>
+        </div>
+      </div>
+      <div class="container">
+        <nav>
+          <a class="active" href="/">Dashboard</a>
+          <a href="/workouts">Workouts</a>
+          <a href="/idk">I don't know</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

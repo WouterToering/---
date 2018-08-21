@@ -1,0 +1,49 @@
+<h1>Workouts</h1>
+<div class="block">
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Exercise 1</th>
+        <th>Exercise 2</th>
+        <th>Exercise 3</th>
+        <th>Exercise 4</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% a = Date.today %>
+    <% 10.times do |i| %>
+      <tr>
+        <td><%=(a-i*2).strftime%></td>
+        <% if i % 2 == 0 %>
+          <td>Barbell row · 4x12 · 100kg</td>
+        <% else %>
+          <td>Underhand row · 4x12 · 100kg</td>
+        <% end %>
+        <td>Bench press · 4x12 · 100kg</td>
+        <td>Overhead press · 4x12 · 100kg</td>
+        <% if i % 2 == 0 %>
+          <td>Squat · 4x12 · 100kg</td>
+        <% else %>
+          <td>Sumo deadlift · 4x12 · 100kg</td>
+        <% end %>
+        <td>···</td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <ul>
+      <li class="page active">
+        <a href="/workouts?page=1">1</a>
+      <!--</li>
+      <li class="page">
+        <a href="/workouts?page=2" rel="next">2</a>
+      </li>
+      <li class="next_page">
+        <a href="/workouts?page=2" rel="next">Next ›</a>
+      </li>-->
+    </ul>
+  </div>
+</div>
